@@ -42,7 +42,7 @@
   position: relative;
 }
 
-/* Accent line that grows on hover */
+/* Accent line that expands on hover */
 .skills__category::before {
   content: '';
   position: absolute;
@@ -77,7 +77,7 @@
 .skill-chip {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 9px;
   font-size: 0.875rem;
   font-weight: 400;
   color: var(--color-text-secondary);
@@ -86,22 +86,11 @@
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   cursor: default;
+  width: fit-content;
   transition:
     color var(--ease-fast),
     border-color var(--ease-fast),
     background-color var(--ease-fast);
-  width: fit-content;
-}
-
-/* Leading dot */
-.skill-chip::before {
-  content: '';
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background-color: var(--color-border);
-  flex-shrink: 0;
-  transition: background-color var(--ease-fast);
 }
 
 .skill-chip:hover {
@@ -110,7 +99,29 @@
   background-color: var(--color-bg-elevated);
 }
 
-.skill-chip:hover::before {
+/* ── Devicon icon inside chip ── */
+.skill-chip__icon {
+  font-size: 1.05rem;
+  color: var(--color-text-muted);
+  flex-shrink: 0;
+  transition: color var(--ease-fast);
+}
+
+.skill-chip:hover .skill-chip__icon {
+  color: var(--color-text-primary);
+}
+
+/* ── Fallback dot (for skills without an icon) ── */
+.skill-chip__dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: var(--color-border);
+  flex-shrink: 0;
+  transition: background-color var(--ease-fast);
+}
+
+.skill-chip:hover .skill-chip__dot {
   background-color: var(--color-text-primary);
 }
 
