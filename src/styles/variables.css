@@ -1,0 +1,82 @@
+/* ─────────────────────────────────────────────
+   CSS Custom Properties
+   Light mode is the default (:root)
+   Dark mode is [data-theme="dark"]
+───────────────────────────────────────────── */
+
+:root {
+  /* Backgrounds */
+  --color-bg:          #F5F5F5;
+  --color-bg-surface:  #FFFFFF;
+  --color-bg-elevated: #EBEBEB;
+
+  /* Text */
+  --color-text-primary:   #111111;
+  --color-text-secondary: #555555;
+  --color-text-muted:     #999999;
+
+  /* Borders & Dividers */
+  --color-border: #E0E0E0;
+
+  /* Accent (monochromatic) */
+  --color-accent:       #111111;
+  --color-accent-hover: #333333;
+
+  /* Navigation */
+  --color-nav-bg: rgba(245, 245, 245, 0.88);
+
+  /* Shadows (very subtle for matte look) */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
+
+  /* ── Layout ── */
+  --max-width:  1100px;
+  --nav-height: 64px;
+
+  /* ── Spacing Scale ── */
+  --space-xs:  0.5rem;
+  --space-sm:  1rem;
+  --space-md:  1.5rem;
+  --space-lg:  2.5rem;
+  --space-xl:  4rem;
+  --space-2xl: 6rem;
+
+  /* ── Border Radius ── */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+
+  /* ── Transitions ── */
+  --ease:      0.25s ease;
+  --ease-fast: 0.15s ease;
+
+  /* ── Typography ── */
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* ── Dark Mode ── */
+[data-theme="dark"] {
+  /* Backgrounds — matte black palette */
+  --color-bg:          #141414;
+  --color-bg-surface:  #1C1C1C;
+  --color-bg-elevated: #252525;
+
+  /* Text */
+  --color-text-primary:   #F0F0F0;
+  --color-text-secondary: #AAAAAA;
+  --color-text-muted:     #606060;
+
+  /* Borders */
+  --color-border: #2C2C2C;
+
+  /* Accent */
+  --color-accent:       #F0F0F0;
+  --color-accent-hover: #FFFFFF;
+
+  /* Navigation */
+  --color-nav-bg: rgba(20, 20, 20, 0.88);
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.45);
+}
