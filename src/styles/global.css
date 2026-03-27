@@ -107,6 +107,22 @@ button {
   border-top: 1px solid var(--color-border);
 }
 
+/* ── Fade-In Animation (Scroll) ── */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(30px);
+  visibility: hidden;
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  will-change: opacity, visibility;
+}
+
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+}
+
+
 /* ── Section label (e.g. "02 — About") ── */
 .section-label {
   font-size: 0.72rem;

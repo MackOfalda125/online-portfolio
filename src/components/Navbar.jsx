@@ -14,10 +14,15 @@ function Navbar({ theme, toggleTheme }) {
   const [activeSection, setActiveSection] = useState('home');
   const [scrolled,      setScrolled]      = useState(false);
   const [menuOpen,      setMenuOpen]      = useState(false);
+  const [progress,      setProgress]      = useState(0);
 
-  /* ── Scrolled shadow ── */
+  /* ── Scrolled shadow + progress bar ── */
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
+    const onScroll = () => {
+      const total = document.documentElement.scrollHeight - window.innerHeight;
+      setProgress(total > 0 ? (window.scrollY / total) * 100 : 0);
+      setScrolled(window.scrollY > 20);
+    };
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
@@ -29,15 +34,10 @@ function Navbar({ theme, toggleTheme }) {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id);
-          }
+          if (entry.isIntersecting) setActiveSection(entry.target.id);
         });
       },
-      {
-        rootMargin: `-${64}px 0px -55% 0px`,
-        threshold: 0,
-      }
+      { rootMargin: `-${64}px 0px -55% 0px`, threshold: 0 }
     );
 
     sections.forEach((sec) => observer.observe(sec));
@@ -47,17 +47,14 @@ function Navbar({ theme, toggleTheme }) {
   /* ── Close mobile menu on outside click ── */
   useEffect(() => {
     if (!menuOpen) return;
-    const close = (e) => {
-      if (!e.target.closest('.navbar')) setMenuOpen(false);
-    };
+    const close = (e) => { if (!e.target.closest('.navbar')) setMenuOpen(false); };
     document.addEventListener('click', close);
     return () => document.removeEventListener('click', close);
   }, [menuOpen]);
 
   const handleNavClick = useCallback((e, href) => {
     e.preventDefault();
-    const target = document.getElementById(href);
-    if (target) target.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById(href)?.scrollIntoView({ behavior: 'smooth' });
     setMenuOpen(false);
   }, []);
 
@@ -65,12 +62,23 @@ function Navbar({ theme, toggleTheme }) {
     <nav
       className={[
         'navbar',
-        scrolled  ? 'navbar--scrolled'   : '',
-        menuOpen  ? 'navbar--menu-open'  : '',
+        scrolled ? 'navbar--scrolled'  : '',
+        menuOpen ? 'navbar--menu-open' : '',
       ].join(' ')}
       role="navigation"
       aria-label="Main navigation"
     >
+      {/* Scroll progress bar */}
+      <div
+        className="navbar__progress"
+        style={{ width: `${progress}%` }}
+        role="progressbar"
+        aria-valuenow={Math.round(progress)}
+        aria-valuemin={0}
+        aria-valuemax={100}
+        aria-label="Page scroll progress"
+      />
+
       <div className="navbar__inner">
 
         {/* Logo */}
@@ -101,8 +109,6 @@ function Navbar({ theme, toggleTheme }) {
         {/* Right actions */}
         <div className="navbar__actions">
           <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
-
-          {/* Hamburger */}
           <button
             id="nav-hamburger"
             className={`navbar__hamburger ${menuOpen ? 'navbar__hamburger--open' : ''}`}
@@ -110,9 +116,7 @@ function Navbar({ theme, toggleTheme }) {
             aria-label="Toggle mobile menu"
             aria-expanded={menuOpen}
           >
-            <span />
-            <span />
-            <span />
+            <span /><span /><span />
           </button>
         </div>
       </div>
