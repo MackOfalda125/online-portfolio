@@ -1,0 +1,155 @@
+/* ─────────────────────────────────────────────
+   Home Section
+───────────────────────────────────────────── */
+
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2xl);
+  min-height: calc(100vh - var(--nav-height) - var(--space-xl) - var(--space-2xl));
+  width: 100%;
+}
+
+/* ── Text Content ── */
+.home__content {
+  flex: 1;
+  max-width: 560px;
+}
+
+.home__greeting {
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: var(--color-text-muted);
+  letter-spacing: 0.02em;
+  margin-bottom: var(--space-xs);
+}
+
+.home__name {
+  font-size: clamp(3rem, 7.5vw, 5.5rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-sm);
+}
+
+.home__role {
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-md);
+  letter-spacing: 0.01em;
+}
+
+.home__tagline {
+  font-size: 0.975rem;
+  line-height: 1.85;
+  color: var(--color-text-muted);
+  max-width: 440px;
+  margin-bottom: var(--space-lg);
+}
+
+.home__ctas {
+  display: flex;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+/* ── Visual ── */
+.home__visual {
+  flex-shrink: 0;
+}
+
+/* ── Code Card ── */
+.home__card {
+  width: 340px;
+  background-color: var(--color-bg-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: border-color var(--ease), box-shadow var(--ease);
+}
+
+.home__card:hover {
+  border-color: var(--color-text-muted);
+}
+
+/* Title bar */
+.home__card-bar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: 0.6rem 1rem;
+  background-color: var(--color-bg-elevated);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.home__card-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.home__card-dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+}
+
+.dot--close  { background-color: #FF5F57; }
+.dot--min    { background-color: #FEBC2E; }
+.dot--max    { background-color: #28C840; }
+
+.home__card-filename {
+  font-size: 0.74rem;
+  color: var(--color-text-muted);
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* Code body */
+.home__card-code {
+  padding: var(--space-md);
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.82rem;
+  line-height: 2;
+}
+
+.home__card-code p {
+  color: var(--color-text-secondary);
+}
+
+.tok-indent { padding-left: 1.5rem; }
+
+/* Tokens — monochrome */
+.tok-kw   { color: var(--color-text-muted); font-style: italic; }
+.tok-var  { color: var(--color-text-primary); font-weight: 600; }
+.tok-op,
+.tok-punc { color: var(--color-text-muted); }
+.tok-key  { color: var(--color-text-secondary); }
+.tok-str  { color: var(--color-text-secondary); }
+.tok-bool { color: var(--color-text-primary); font-weight: 600; }
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .home__card { width: 300px; }
+}
+
+@media (max-width: 768px) {
+  .home {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: var(--space-xl);
+    min-height: auto;
+    padding-top: var(--space-md);
+  }
+
+  .home__content  { max-width: 100%; }
+  .home__tagline  { max-width: 100%; }
+  .home__ctas     { justify-content: center; }
+
+  .home__card {
+    width: 100%;
+    max-width: 320px;
+  }
+}
