@@ -1,0 +1,39 @@
+/* ─────────────────────────────────────────────
+   Projects Section
+───────────────────────────────────────────── */
+
+.projects {
+  max-width: 900px;
+}
+
+/* ── Header ── */
+.projects__header {
+  margin-bottom: var(--space-xl);
+}
+
+.projects__title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin-top: var(--space-xs);
+  margin-bottom: var(--space-sm);
+}
+
+.projects__subtitle {
+  font-size: 0.975rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+}
+
+/* ── 2-column card grid ── */
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-md);
+}
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  .projects { max-width: 100%; }
+  .projects__grid { grid-template-columns: 1fr; }
+}
