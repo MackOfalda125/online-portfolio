@@ -10,12 +10,19 @@ function Home() {
 
       {/* ── Left: Text content ── */}
       <div className="home__content">
+        <div className="home__profile">
+          <img
+            src="/profile-picture.png"
+            alt="Profile placeholder"
+            className="home__profile-img"
+          />
+        </div>
         <p className="home__greeting">Hello, I'm</p>
-        <h1 className="home__name">John Doe.</h1>
+        <h1 className="home__name">Mackenzie Ofalda.</h1>
         <p className="home__role">Software Developer</p>
         <p className="home__tagline">
-          I build clean, functional, and user-centered digital experiences.
-          Passionate about quality code and solving real-world problems.
+          I build mobile and web applications using modern development practices and cloud technologies,
+          with a strong foundation in software design.
         </p>
         <div className="home__ctas">
           <button
@@ -43,8 +50,8 @@ function Home() {
           <div className="home__card-bar">
             <div className="home__card-dots">
               <span className="home__card-dot dot--close" />
-              <span className="home__card-dot dot--min"   />
-              <span className="home__card-dot dot--max"   />
+              <span className="home__card-dot dot--min" />
+              <span className="home__card-dot dot--max" />
             </div>
             <span className="home__card-filename">developer.js</span>
           </div>
@@ -60,7 +67,7 @@ function Home() {
             <p className="tok-indent">
               <span className="tok-key">name</span>
               <span className="tok-punc">:</span>{' '}
-              <span className="tok-str">"John Doe"</span>
+              <span className="tok-str">"Mackenzie Ofalda"</span>
               <span className="tok-punc">,</span>
             </p>
             <p className="tok-indent">
@@ -73,11 +80,11 @@ function Home() {
               <span className="tok-key">skills</span>
               <span className="tok-punc">:</span>{' '}
               <span className="tok-punc">[</span>
-              <span className="tok-str">"React"</span>
+              <span className="tok-str">"Python"</span>
               <span className="tok-punc">,</span>{' '}
               <span className="tok-str">"JS"</span>
               <span className="tok-punc">,</span>{' '}
-              <span className="tok-str">"CSS"</span>
+              <span className="tok-str">"Dart"</span>
               <span className="tok-punc">]</span>
               <span className="tok-punc">,</span>
             </p>
