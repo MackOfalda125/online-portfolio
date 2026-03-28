@@ -52,6 +52,10 @@
 
   /* ── Typography ── */
   --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* ── Contextual Defaults ── */
+  --project-bg-opacity: 0.15;
+  --project-bg-opacity-hover: 0.3;
 }
 
 /* ── Dark Mode ── */
@@ -79,4 +83,8 @@
   /* Shadows */
   --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.35);
   --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.45);
+
+  /* ── Contextual Defaults ── */
+  --project-bg-opacity: 0.15;
+  --project-bg-opacity-hover: 0.3;
 }

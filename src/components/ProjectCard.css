@@ -39,14 +39,12 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.15;
-  filter: grayscale(40%);
-  transition: opacity 0.5s ease, transform 0.8s ease, filter 0.5s ease;
+  opacity: var(--project-bg-opacity);
+  transition: opacity 0.5s ease, transform 0.8s ease;
 }
 
 .project-card:hover .project-card__bg-img {
-  opacity: 0.3;
-  filter: grayscale(0%);
+  opacity: var(--project-bg-opacity-hover);
   transform: scale(1.05);
 }
 

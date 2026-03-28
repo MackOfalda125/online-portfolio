@@ -3,18 +3,18 @@ import ThemeToggle from './ThemeToggle';
 import './Navbar.css';
 
 const NAV_LINKS = [
-  { label: 'Home',     href: 'home'     },
-  { label: 'About',    href: 'about'    },
-  { label: 'Skills',   href: 'skills'   },
+  { label: 'Home', href: 'home' },
+  { label: 'About', href: 'about' },
+  { label: 'Skills', href: 'skills' },
   { label: 'Projects', href: 'projects' },
-  { label: 'Contact',  href: 'contact'  },
+  { label: 'Contact', href: 'contact' },
 ];
 
 function Navbar({ theme, toggleTheme }) {
   const [activeSection, setActiveSection] = useState('home');
-  const [scrolled,      setScrolled]      = useState(false);
-  const [menuOpen,      setMenuOpen]      = useState(false);
-  const [progress,      setProgress]      = useState(0);
+  const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [progress, setProgress] = useState(0);
 
   /* ── Scrolled shadow + progress bar ── */
   useEffect(() => {
@@ -62,7 +62,7 @@ function Navbar({ theme, toggleTheme }) {
     <nav
       className={[
         'navbar',
-        scrolled ? 'navbar--scrolled'  : '',
+        scrolled ? 'navbar--scrolled' : '',
         menuOpen ? 'navbar--menu-open' : '',
       ].join(' ')}
       role="navigation"
@@ -88,7 +88,7 @@ function Navbar({ theme, toggleTheme }) {
           onClick={(e) => handleNavClick(e, 'home')}
           aria-label="Go to top"
         >
-          Portfolio<span className="navbar__logo-dot">.</span>
+          Mackenzie Ofalda<span className="navbar__logo-dot">.</span>
         </a>
 
         {/* Desktop links */}

@@ -26,6 +26,7 @@ const projects = [
     desc: 'A minimalist portfolio designed to showcase my projects, technical skills, and experience with clarity and simplicity.',
     tech: ['Dart', 'Flutter', 'MySQL', 'Firebase'],
     github: 'https://github.com/MackOfalda125/online-portfolio',
+    link: 'https://mackenzie-ofalda.vercel.app',
     image: '/profile-picture.png',
   },
 ];

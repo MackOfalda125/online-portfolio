@@ -35,7 +35,7 @@ const categories = [
     label: 'Cloud & DevOps',
     skills: [
       { name: 'AWS', icon: 'devicon-amazonwebservices-plain-wordmark' },
-      { name: 'Azure DevOps', icon: 'devicon-azure-plain' },
+      { name: 'Azure DevOps', icon: 'devicon-azuredevops-plain' },
       { name: 'Bicep', icon: null },
       { name: 'YAML', icon: null },
       { name: 'Shell/Bash', icon: null },

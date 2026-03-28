@@ -102,13 +102,11 @@
 /* ── Devicon icon inside chip ── */
 .skill-chip__icon {
   font-size: 1.05rem;
-  filter: grayscale(40%);
   flex-shrink: 0;
-  transition: filter var(--ease-fast), transform var(--ease-fast);
+  transition: transform var(--ease-fast);
 }
 
 .skill-chip:hover .skill-chip__icon {
-  filter: grayscale(0%);
   transform: scale(1.1);
 }
 
