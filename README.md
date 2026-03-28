@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+# Personal Online Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A minimalist, responsive, and modern single-page portfolio built with React. Designed to cleanly showcase projects, technical skills, and professional experience with an emphasis on readable typography and smooth user experience.
 
-## Available Scripts
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 
-In the project directory, you can run:
+## 🚀 Features
 
-### `npm start`
+- **Single-Page Architecture**: Seamless scrolling navigation managed via an `IntersectionObserver` that highlights active sections.
+- **Dark/Light Mode**: Fully realized custom CSS custom-property theme system (featuring a sleek matte-black dark mode) that persists via `localStorage`.
+- **Responsive Layouts**: Designed mobile-first. Grids stack perfectly on phones and expand gracefully on larger displays.
+- **Scroll Progress & Animations**: Subtle fade-in animations as you scroll down the page, combined with a dynamic reading-progress bar across the top navigation.
+- **Dynamic Content rendering**: Skills, Experiences, and Projects are defined in clean data arrays, making it incredibly easy to update and maintain.
+- **Visual Polish**: Features dynamic background tinting for project cards and colorful devicons that naturally adapt to the active theme.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🛠 Tech Stack
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Core**: React 19 (Hooks-based architecture)
+- **Styling**: Vanilla CSS (Using modern CSS Custom Properties for tokens)
+- **Icons**: [Devicon](https://devicon.dev/) for tech stack branding
 
-### `npm test`
+## 📁 Project Structure
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Following a clean, component-based methodology:
 
-### `npm run build`
+```text
+src/
+ ├── components/       # Reusable UI elements
+ │    ├── Navbar        # Fixed navigation with intersection tracking
+ │    ├── ProjectCard   # Grid cards with background image effects
+ │    ├── SectionWrapper# Standardized section shell with fade-ins
+ │    └── ThemeToggle   # Animated sun/moon button
+ ├── sections/         # Main page content blocks
+ │    ├── Home          # Hero section & profile picture
+ │    ├── About         # Background and education details
+ │    ├── Skills        # Tech stack grid with categorized Devicons
+ │    ├── Projects      # Showcase array mapping to ProjectCards
+ │    └── Contact       # Interactive detail cards and external links
+ ├── styles/           # Global style system
+ │    ├── global.css    # Typography, resets, and utility animations
+ │    └── variables.css # Theming tokens (colors, spacing, radii)
+ └── App.js            # Main composition and theme provider shell
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## ⚙️ Getting Started
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To run this project locally:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/MackOfalda125/online-portfolio.git
+   ```
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+3. **Start the development server**
+   ```bash
+   npm start
+   ```
+   Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-### `npm run eject`
+## 🎨 Customization
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Updating the portfolio is designed to be frictionless:
+- **Change the Colors**: Open `src/styles/variables.css` and tweak the HSL values to re-theme the entire application.
+- **Update Your Details**: Navigate to `src/sections/` and update the data arrays (`projects`, `categories`, `education`) at the top of the respective files.
+- **Update Your Logo**: Swap out the URLs or replace the `profile-picture.png` in the `public` directory.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 📄 License
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is open-source and free to be adapted for your own personal portfolio.
