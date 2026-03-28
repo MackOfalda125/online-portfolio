@@ -75,7 +75,7 @@ function Skills() {
                 <span key={skill.name} className="skill-chip">
                   {skill.icon ? (
                     <i
-                      className={`${skill.icon} skill-chip__icon`}
+                      className={`${skill.icon} colored skill-chip__icon`}
                       aria-hidden="true"
                     />
                   ) : (

@@ -102,13 +102,14 @@
 /* ── Devicon icon inside chip ── */
 .skill-chip__icon {
   font-size: 1.05rem;
-  color: var(--color-text-muted);
+  filter: grayscale(40%);
   flex-shrink: 0;
-  transition: color var(--ease-fast);
+  transition: filter var(--ease-fast), transform var(--ease-fast);
 }
 
 .skill-chip:hover .skill-chip__icon {
-  color: var(--color-text-primary);
+  filter: grayscale(0%);
+  transform: scale(1.1);
 }
 
 /* ── Fallback dot (for skills without an icon) ── */
