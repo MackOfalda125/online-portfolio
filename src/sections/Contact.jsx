@@ -33,22 +33,22 @@ const contactLinks = [
   {
     id: 'github',
     label: 'GitHub',
-    value: 'github.com/placeholder',
-    href: 'https://github.com/placeholder',
+    value: 'github.com/MackOfalda125',
+    href: 'https://github.com/MackOfalda125',
     icon: <GitHubIcon />,
   },
   {
     id: 'linkedin',
     label: 'LinkedIn',
-    value: 'linkedin.com/in/placeholder',
-    href: 'https://linkedin.com/in/placeholder',
+    value: 'linkedin.com/in/mackenzie-ofalda',
+    href: 'https://linkedin.com/in/mackenzie-ofalda',
     icon: <LinkedInIcon />,
   },
   {
     id: 'email',
     label: 'Email',
-    value: 'hello@placeholder.com',
-    href: 'mailto:hello@placeholder.com',
+    value: 'ofaldamackenzie@gmail.com',
+    href: 'mailto:ofaldamackenzie@gmail.com',
     icon: <EmailIcon />,
   },
 ];
@@ -62,8 +62,7 @@ function Contact() {
         <p className="section-label">05 — Contact</p>
         <h2 className="contact__title">Let's connect.</h2>
         <p className="contact__message">
-          Whether you want to discuss a project, ask a question, or just say
-          hi — I'd love to hear from you. My inbox is always open.
+          Have a project, a thought, or just want to chat? Send it my way.
         </p>
       </div>
 
