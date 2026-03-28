@@ -9,7 +9,8 @@ const projects = [
     desc: 'An Android fitness app that evaluates exercise form in real time, giving users visual feedback to improve posture and reduce the risk of injury.',
     tech: ['Python', 'Dart', 'Flutter', 'Kotlin'],
     github: 'https://github.com/MackOfalda125/flexfit-app',
-    link: '#',
+    link: 'https://flexfit.vercel.app/home',
+    image: '/flexfit-logo.png',
   },
   {
     id: 2,
@@ -17,6 +18,15 @@ const projects = [
     desc: 'An app that recommends travel destinations based on user preferences, helping users discover personalized trips efficiently.',
     tech: ['Dart', 'Flutter', 'MySQL', 'Firebase'],
     github: 'https://github.com/MackOfalda125/destifind',
+    image: '/destifind-logo.png',
+  },
+  {
+    id: 3,
+    title: 'Online Portfolio',
+    desc: 'A minimalist portfolio designed to showcase my projects, technical skills, and experience with clarity and simplicity.',
+    tech: ['Dart', 'Flutter', 'MySQL', 'Firebase'],
+    github: 'https://github.com/MackOfalda125/online-portfolio',
+    image: '/profile-picture.png',
   },
 ];
 

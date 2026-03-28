@@ -39,10 +39,18 @@ const ExternalIcon = () => (
  *   tech   {string[]}      — list of technologies used
  *   github {string|null}   — GitHub URL (omit to hide)
  *   link   {string|null}   — external website URL (omit to hide)
+ *   image  {string|null}   — background image/logo URL (omit to hide)
  */
-function ProjectCard({ title, desc, tech = [], github, link }) {
+function ProjectCard({ title, desc, tech = [], github, link, image }) {
   return (
     <article className="project-card">
+
+      {/* Background Image */}
+      {image && (
+        <div className="project-card__bg" aria-hidden="true">
+          <img src={image} alt="" className="project-card__bg-img" />
+        </div>
+      )}
 
       {/* Body */}
       <div className="project-card__body">
