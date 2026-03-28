@@ -4,19 +4,19 @@ import './About.css';
 /* ── Placeholder data (replace with real info later) ── */
 const education = [
   {
-    title:    'Bachelor of Science in Information Technology',
-    subtitle: 'Placeholder University',
-    period:   '2020 – 2024',
-    desc:     'Focused on software engineering, data structures, algorithms, and modern web development.',
+    title: 'Bachelor of Science in Computer Science',
+    subtitle: 'Holy Angel University',
+    period: '2022 – 2026',
+    desc: 'President’s Lister for 5 consecutive semesters (2022–2024).',
   },
 ];
 
 const experience = [
   {
-    title:    'Software Development Intern',
-    subtitle: 'Placeholder Company',
-    period:   'Jun 2023 – Aug 2023',
-    desc:     'Contributed to internal tooling using React and Node.js. Collaborated within an Agile team environment.',
+    title: 'AI Developer Intern',
+    subtitle: 'Shore360, Inc.',
+    period: 'Dec 2025 – Mar 2026',
+    desc: 'Developed and tested an exception reporting system to improve accuracy and reduce false positives, while supporting CI/CD pipeline automation with Azure DevOps and deploying AI agents via Microsoft Foundry to ensure reliable end-to-end operations.',
   },
 ];
 
@@ -50,14 +50,12 @@ function About() {
         {/* Summary */}
         <div className="about__summary">
           <p>
-            I'm a software developer focused on building clean, functional, and
-            user-friendly digital experiences. I enjoy the full process — from
-            designing intuitive interfaces to writing solid backend logic.
+            I'm a Bachelor of Science in Computer Science graduate with a strong foundation in software development and application design.
+            I've worked on mobile and web-based projects that apply modern development practices and leverage cloud technologies to build scalable, user-focused solutions.
           </p>
           <p>
-            I'm currently open to opportunities where I can contribute
-            meaningfully, keep growing my skills, and work alongside
-            driven, collaborative teams.
+            Lately, I've been focusing on DevOps and cloud technologies, learning how to design efficient, scalable, and maintainable systems.
+            I enjoy automating workflows, solving practical problems, and improving system reliability while contributing to projects that have real impact. I'm open to opportunities where I can grow, collaborate with driven teams, and continue refining my DevOps and cloud expertise.
           </p>
 
           {/* Meta */}
