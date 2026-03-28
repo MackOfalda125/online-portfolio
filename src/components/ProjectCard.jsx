@@ -38,9 +38,9 @@ const ExternalIcon = () => (
  *   desc   {string}        — short description
  *   tech   {string[]}      — list of technologies used
  *   github {string|null}   — GitHub URL (omit to hide)
- *   demo   {string|null}   — live demo URL (omit to hide)
+ *   link   {string|null}   — external website URL (omit to hide)
  */
-function ProjectCard({ title, desc, tech = [], github, demo }) {
+function ProjectCard({ title, desc, tech = [], github, link }) {
   return (
     <article className="project-card">
 
@@ -58,7 +58,7 @@ function ProjectCard({ title, desc, tech = [], github, demo }) {
       </div>
 
       {/* Footer links */}
-      {(github || demo) && (
+      {(github || link) && (
         <div className="project-card__footer">
           {github && (
             <a
@@ -72,16 +72,16 @@ function ProjectCard({ title, desc, tech = [], github, demo }) {
               GitHub
             </a>
           )}
-          {demo && (
+          {link && (
             <a
-              href={demo}
+              href={link}
               target="_blank"
               rel="noopener noreferrer"
               className="project-card__link"
-              aria-label={`Live demo for ${title}`}
+              aria-label={`External link for ${title}`}
             >
               <ExternalIcon />
-              Live Demo
+              Website
             </a>
           )}
         </div>

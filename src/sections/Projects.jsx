@@ -2,39 +2,21 @@ import React from 'react';
 import ProjectCard from '../components/ProjectCard';
 import './Projects.css';
 
-/* ── Placeholder data (replace with real projects later) ── */
 const projects = [
   {
     id: 1,
-    title: 'Project One',
-    desc: 'A placeholder project. Short summary of what it does and the problem it solves for the end user.',
-    tech: ['React', 'Node.js', 'CSS'],
-    github: '#',
-    demo: '#',
+    title: 'FlexFit',
+    desc: 'An Android fitness app that evaluates exercise form in real time, giving users visual feedback to improve posture and reduce the risk of injury.',
+    tech: ['Python', 'Dart', 'Flutter', 'Kotlin'],
+    github: 'https://github.com/MackOfalda125/flexfit-app',
+    link: '#',
   },
   {
     id: 2,
-    title: 'Project Two',
-    desc: 'Backend-focused project demonstrating RESTful API design, database management, and user authentication.',
-    tech: ['Python', 'Express', 'MySQL'],
-    github: '#',
-    demo: null,
-  },
-  {
-    id: 3,
-    title: 'Project Three',
-    desc: 'Frontend-focused project showcasing responsive design, modern CSS techniques, and smooth UI interactions.',
-    tech: ['JavaScript', 'HTML5', 'CSS3'],
-    github: '#',
-    demo: '#',
-  },
-  {
-    id: 4,
-    title: 'Project Four',
-    desc: 'Full-stack application with user authentication, protected routes, and persistent data storage.',
-    tech: ['React', 'Node.js', 'SQL'],
-    github: '#',
-    demo: null,
+    title: 'DestiFind',
+    desc: 'An app that recommends travel destinations based on user preferences, helping users discover personalized trips efficiently.',
+    tech: ['Dart', 'Flutter', 'MySQL', 'Firebase'],
+    github: 'https://github.com/MackOfalda125/destifind',
   },
 ];
 
